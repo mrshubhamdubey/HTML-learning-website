@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Day 01 - Introduction to Web Development</title>
+</head>
+<body bgcolor="whitesmoke">
+
+  <!-- Header Section -->
+
+  <font face="Arial">
+    <h1 align="center">Day 01 — Introduction to Web Development</h1>
+  <p align="center"><small>Topics: Internet, Data Transfer, IP, DNS, Ports, MAC, LAN, Routers, IPv4/IPv6, VPN</small></p>
+  </font>
+  <hr>
+
+  <!-- Main Section-->
+
+  <font face="trebuchet ms">
+
+  <h2>1. What is the Internet? 🌐</h2>
+  <p>
+    The <b>Internet</b> is a global system of interconnected networks that uses a common set of protocols (TCP/IP)
+    to allow devices to communicate and share information. It is not a single machine — it's a network of networks:
+    home networks, data-centers, university networks, cloud providers, ISP backbones, etc.
+  </p>
+  <p><b>Real-world example:</b> When you open <i>www.example.com</i>, your computer connects (via multiple networks)
+  to the server that hosts that site and downloads the website files (HTML/CSS/JS/images).</p>
+
+  <!-- 2 -->
+  <h2>2. How is data transferred?</h2>
+  <p>
+    Data on the Internet is transferred using <b>packet switching</b>. Large messages are split into small packets.
+    Each packet carries source/destination addresses and sequence information so the receiver can reassemble them.
+  </p>
+
+  <h3>Key concepts</h3>
+  <ul>
+    <li><b>Packets:</b> Small units of data with headers and payload.</li>
+    <li><b>Routing:</b> Routers decide the next hop for packets toward their destination.</li>
+    <li><b>Protocols:</b> TCP (reliable, ordered delivery), UDP (faster, unordered), IP (routing/addressing).</li>
+  </ul>
+
+  <h3>Practice commands (try in terminal)</h3>
+  <pre>
+# send an ICMP ping
+ping google.com
+
+# show route taken by packets (Linux/macOS)
+traceroute google.com
+
+# Windows: tracert google.com
+  </pre>
+
+  <p><img src="./images/data transfer.jpg" alt="Packet transfer diagram" width="520"></p>
+
+  <!-- 3 -->
+  <h2>3. What is an IP Address?</h2>
+  <p>
+    An <b>IP address</b> is a numerical label assigned to each device on a network. It is used to identify and locate devices.
+    There are two main versions: <b>IPv4</b> (32-bit) and <b>IPv6</b> (128-bit).
+  </p>
+
+  <p><b>IPv4 example:</b> <code>192.168.1.10</code> &nbsp; — dotted decimal format.<br>
+     <b>IPv6 example:</b> <code>2001:0db8:85a3:0000:0000:8a2e:0370:7334</code> (can be shortened).</p>
+
+  <!-- 4 -->
+  <h2>4. How to access a website?</h2>
+  <ol>
+    <li>You type a URL (e.g., <code>https://www.example.com</code>) in the browser.</li>
+    <li>Browser asks DNS to resolve the domain name to an IP address.</li>
+    <li>Browser opens a TCP connection (or TLS) to the server's IP and port (e.g., port 443 for HTTPS).</li>
+    <li>Browser requests files (HTML, CSS, JS) and renders the page.</li>
+  </ol>
+
+  <!-- 5 -->
+  <h2>5. Who assigns the IP Address?</h2>
+  <p>
+    IP addresses are globally coordinated by organizations like <b>IANA</b> and regional registries (RIRs).
+    Internet Service Providers (ISPs) allocate public IPs to customers. Inside your home network, the router
+    usually assigns private IPs to devices via DHCP.
+  </p>
+
+  <!-- 6 -->
+  <h2>6. Concept of DNS (Domain Name System)</h2>
+  <p>
+    DNS is like the Internet's phonebook: it converts human-friendly domain names into IP addresses.
+    Types of DNS records:
+  </p>
+  <ul>
+    <li><b>A</b> — maps domain to IPv4 address</li>
+    <li><b>AAAA</b> — maps domain to IPv6 address</li>
+    <li><b>CNAME</b> — alias to another domain</li>
+    <li><b>MX</b> — mail exchange server</li>
+  </ul>
+  <p><b>Example:</b> <code>example.com —A→ 93.184.216.34</code></p>
+
+  <p><img src="./images/DNS resolution diagram.webp" alt="DNS resolution diagram" width="520"></p>
+
+  <!-- 7 -->
+  <h2>7. In-depth working of DNS (step-by-step)</h2>
+  <ol>
+    <li>Browser checks its local cache for the domain.</li>
+    <li>If not found, browser asks the OS resolver, which may check the local hosts file.</li>
+    <li>Resolver queries the configured recursive DNS resolver (usually from your ISP or a public DNS like 8.8.8.8).</li>
+    <li>Recursive resolver asks root servers → then TLD servers (.com, .in) → then authoritative name server for the domain.</li>
+    <li>Authoritative server returns the A/AAAA record and the resolver returns it to your machine.</li>
+    <li>Browser uses the IP to connect to the web server.</li>
+  </ol>
+
+  <h3>Command-line DNS tools</h3>
+  <pre>
+# Linux/macOS: dig
+dig example.com
+
+# Windows: nslookup
+nslookup example.com
+  </pre>
+
+  <!-- 8 -->
+  <h2>8. Problems in Data Transfer & MAC Address</h2>
+  <p>
+    Common problems: packet loss, latency, jitter, corruption. Networks use error checking and retransmission (TCP)
+    to recover lost data. At the local (link) layer, devices have a <b>MAC (Media Access Control) address</b> — a unique
+    hardware ID used on the same local network segment.
+  </p>
+  <p><b>MAC format example:</b> <code>00:1A:2B:3C:4D:5E</code>. You can lookup vendor info from the first 3 bytes.</p>
+
+  <!-- 9 -->
+  <h2>9. What are Port Numbers?</h2>
+  <p>
+    A port number identifies a specific process/service on a host. The combination of IP + port uniquely identifies a socket.
+    Example: HTTP → port 80, HTTPS → port 443, SSH → port 22.
+  </p>
+  <p><b>Common ports:</b> 22 (SSH), 25 (SMTP), 53 (DNS), 80 (HTTP), 443 (HTTPS), 3306 (MySQL)</p>
+
+  <!-- 10 -->
+  <h2>10. IPv4 &amp; IPv6 (detailed)</h2>
+  <h3>IPv4</h3>
+  <p>32-bit address, usually written as four decimal numbers (0–255) separated by dots.</p>
+  <p><b>Subnet example:</b> <code>192.168.1.0/24</code> means addresses 192.168.1.0–192.168.1.255 with mask 255.255.255.0.</p>
+
+  <h3>IPv6</h3>
+  <p>128-bit address with hexadecimal groups separated by colons. Designed because IPv4 address space ran out.</p>
+  <p><b>Example shortened:</b> <code>2001:db8::1</code> (double colon compresses zeros).</p>
+
+  <p><img src="./images/IPv4 structure.avif" alt="IPv4 structure" width="300"> &nbsp;
+     <img src="./images/IPv6-1536x864.png" alt="IPv6 structure" width="300"></p>
+
+  <!-- 11 -->
+  <h2>11. MAC Address Format</h2>
+  <p>
+    MAC addresses are 48-bit values expressed as 6 pairs of hexadecimal digits. Example: <code>AA:BB:CC:11:22:33</code>.
+    The first half (OUI) identifies the vendor, the second half the device.
+  </p>
+
+  <!-- 12 -->
+  <h2>12. Port Number Format</h2>
+  <p>
+    Ports are 16-bit numbers (0–65535). Categories:
+  </p>
+  <ul>
+    <li>0–1023: Well-known ports (system)</li>
+    <li>1024–49151: Registered ports</li>
+    <li>49152–65535: Dynamic/private ports</li>
+  </ul>
+
+  <!-- 13 -->
+  <h2>13. Local Area Network (LAN), Switch &amp; Router</h2>
+  <p>
+    <b>LAN:</b> A local network in a home/office. <br>
+    <b>Switch:</b> Works at link layer, forwards frames based on MAC addresses (connects devices inside LAN).<br>
+    <b>Router:</b> Works at network layer, forwards packets between different networks (e.g., your home LAN to ISP).
+  </p>
+  <p><img src="./images/Switch vs Router.jpg" alt="Switch vs Router" width="520"></p>
+
+  <!-- 14 -->
+  <h2>14. Public and Private Addresses</h2>
+  <p>
+    Private IPv4 ranges (RFC1918) — these are not routable on the public Internet:
+  </p>
+  <ul>
+    <li><code>10.0.0.0/8</code></li>
+    <li><code>172.16.0.0/12</code></li>
+    <li><code>192.168.0.0/16</code></li>
+  </ul>
+  <p>Routers use <b>NAT (Network Address Translation)</b> to map many private addresses to a single public IP for Internet access.</p>
+
+  <!-- 15 -->
+  <h2>15. Modern Routers</h2>
+  <p>
+    Modern consumer routers combine routing, switching, Wi-Fi access point, firewall, DHCP server and often VPN client/server.
+    They provide a management UI and features like parental controls, guest networks and QoS.
+  </p>
+
+  <!-- 16 -->
+  <h2>16. What is a VPN?</h2>
+  <p>
+    A <b>VPN (Virtual Private Network)</b> creates a secure, encrypted tunnel between your device and a VPN server.
+    It masks your public IP and protects data on untrusted networks (e.g., public Wi-Fi).
+  </p>
+  <p><b>Types:</b> Remote access VPN (user ↔ VPN server), Site-to-site VPN (network ↔ network).<br>
+    <b>Example technologies:</b> OpenVPN, WireGuard, IPsec.
+  </p>
+  <p><img src="./images/VPN concept.webp" alt="VPN concept" width="520"></p>
+
+  <hr>
+
+  <h2>Useful hands-on examples & commands</h2>
+  <p>These commands help you explore networking concepts on your machine:</p>
+  <pre>
+# Show your local IP addresses (Linux/macOS)
+ip addr show
+
+# Windows
+ipconfig
+
+# DNS lookup
+dig example.com
+nslookup example.com
+
+# Traceroute / tracert
+traceroute example.com    # Linux/macOS
+tracert example.com       # Windows
+
+# Find MAC address (Linux)
+ip link show
+
+# Ping to check connectivity
+ping 8.8.8.8
+  </pre>
+
+  <hr>
+
+  <h2>Lecture Video</h2>
+  <p align="center">
+    <iframe width="560" height="315"
+      src="https://youtube.com/embed/1pcikNlDB-4?si=QpCUdtAd65k1huKF"
+      title="Day 01 Lecture - Internet & Networking"
+      frameborder="0" allowfullscreen></iframe>
+  </p>
+
+  <hr>
+
+  <h2>Further reading & resources</h2>
+  <ul>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Networking/Introduction">MDN - Networking basics</a></li>
+    <li><a href="https://en.wikipedia.org/wiki/Domain_Name_System">Wikipedia - DNS</a></li>
+    <li><a href="https://en.wikipedia.org/wiki/IP_address">Wikipedia - IP address</a></li>
+  </ul>
+
+  <hr>
+
+  <!-- Footer Section -->
+
+  <p align="center"><a href="index.html">⬅ Back to Homepage</a></p>
+  <font/>
+
+</body>
+</html>

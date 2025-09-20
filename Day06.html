@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Day 06 - Media Tags, Multi-Page Websites, Deployment</title>
+  </head>
+  <body bgcolor="whitesmoke">
+    <!-- Header Section -->
+
+    <font face="Arial">
+      <h1 align="center">
+        Day 06 - Deploy Your First Project | Media Tag | Multi Page Website 🌐
+      </h1>
+      <p align="center">
+        First, we'll master the HTML media tags, afterthat Deploy our first
+        website 🖳
+      </p>
+    </font>
+    <hr />
+
+    <!-- Main Section -->
+
+    <font face="trebuchet ms">
+      <h2>Media Tag 🎬</h2>
+      <p>
+        The <b>Media Tags</b> in HTML allow us to integrate <b>audio</b> and
+        <b>video</b> content into webpages. They provide controls like play,
+        pause, and volume, making websites interactive.
+      </p>
+      <img
+        src="https://www.metablogger.in/img/blogs/html-media-tags/cover.webp"
+        alt="Media Tag Example"
+        width="400"
+      />
+
+      <!-- Audio -->
+      <h2>Integrating Audio Files 🔊 </h2>
+      <pre>
+&lt;audio src="audio/song.mp3" controls&gt;&lt;/audio&gt;
+    </pre
+      >
+      <p><b>controls:</b> attribute adds play/pause/volume options.</p>
+
+      <h3>Audio: Proper Formats</h3>
+      <ul>
+        <li>MP3 (Most common, supported in all browsers)</li>
+        <li>WAV (High quality, but large size)</li>
+        <li>OGG (Open-source format)</li>
+      </ul>
+      <p>
+        <b>Why Proper Formats are Needed?</b> Because not all browsers support
+        every file format. MP3 ensures maximum compatibility.
+      </p>
+      <!-- Video -->
+      <h2>Integrating Video Files 🎞️</h2>
+      <pre>
+&lt;video src="video/sample.mp4" controls width="400"&gt;&lt;/video&gt;
+    </pre
+      >
+      <p><b>controls:</b> lets user control video playback.</p>
+
+      <h3>Video: Proper Formats</h3>
+      <ul>
+        <li>MP4 (Most widely supported)</li>
+        <li>WebM (Open-source format)</li>
+        <li>OGG (Some browsers support)</li>
+      </ul>
+
+      <!-- Embedding YouTube -->
+      <h2>Embedding YouTube Videos [▶Youtube]</h2>
+      <p>
+        YouTube videos can be embedded using the
+        <code>&lt;iframe&gt;</code> tag.
+      </p>
+      <pre>
+&lt;iframe width="560" height="315" 
+src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+title="YouTube video" 
+frameborder="0" 
+allowfullscreen&gt;&lt;/iframe&gt;
+    </pre
+      >
+      <p><b>allowfullscreen:</b> lets video play in full-screen mode.</p>
+
+      <!-- Embed Tag -->
+      <h2>&lt;embed&gt; Tag & Its Importance</h2>
+      <p>
+        The <code>&lt;embed&gt;</code> tag allows embedding external resources
+        like PDFs, Flash, or audio/video files.
+      </p>
+      <pre>
+&lt;embed src="document.pdf" width="500" height="400"&gt;
+    </pre
+      >
+
+      <!-- Autoplay -->
+      <h2>Autoplay Feature</h2>
+      <pre>
+&lt;video src="video/sample.mp4" autoplay muted&gt;&lt;/video&gt;
+    </pre
+      >
+      <p>
+        <b>muted</b> is required with autoplay in modern browsers, otherwise
+        video won’t start automatically.
+      </p>
+
+      <!-- Multi Page Website -->
+      <h2>Multi-Page Websites 🗐</h2>
+      <p>
+        A <b>multi-page website</b> has multiple HTML pages linked together
+        using navigation.
+      </p>
+
+      <h3>Example:</h3>
+      <pre>
+&lt;!-- index.html --&gt;
+&lt;header&gt;
+    &lt;h1&gt;My Website&lt;/h1&gt;
+    &lt;nav&gt;
+        &lt;a href="index.html"&gt;Home&lt;/a&gt; |
+        &lt;a href="about.html"&gt;About&lt;/a&gt; |
+        &lt;a href="contact.html"&gt;Contact&lt;/a&gt;
+    &lt;/nav&gt;
+&lt;/header&gt;
+
+&lt;main&gt;
+    &lt;h2&gt;Welcome to Home Page&lt;/h2&gt;
+&lt;/main&gt;
+
+&lt;footer&gt;
+    &lt;p&gt;&amp;copy; 2025 My Website&lt;/p&gt;
+&lt;/footer&gt;
+    </pre
+      >
+
+      <img
+        src="https://html-tuts.com/wp-content/uploads/2023/01/How-to-make-multiple-pages-in-HTML-4-728x410.jpg.webp"
+        alt="Multi Page Example"
+        width="500"
+      />
+
+      <!-- iframes with tables -->
+      <h2>Combining iframes with Tables</h2>
+      <pre>
+&lt;table border="1"&gt;
+    &lt;tr&gt;
+        &lt;td&gt;&lt;iframe src="about.html" width="300" height="200"&gt;&lt;/iframe&gt;&lt;/td&gt;
+        &lt;td&gt;&lt;iframe src="contact.html" width="300" height="200"&gt;&lt;/iframe&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+    </pre
+      >
+
+      <!-- Deploying Website -->
+      <h2>Deploying a Website on Netlify</h2>
+      <p>
+        Netlify is a free hosting service for static websites. You can easily
+        deploy your HTML project.
+      </p>
+      <ol>
+        <li>
+          Go to
+          <a href="https://www.netlify.com" target="_blank">Netlify Website</a>.
+        </li>
+        <li>Sign up using GitHub/Google.</li>
+        <li>Create a new site → Upload your HTML project folder.</li>
+        <li>Click on "Deploy Site".</li>
+        <li>Your project will be live on a Netlify domain.</li>
+      </ol>
+      <img
+        src="https://www.netlify.com/v3/img/blog/add-new-project.png"
+        alt="Netlify Deployment"
+        width="500"
+      />
+      <!-- Lecture Video -->
+      <hr />
+      <h2>Lecture Video [ ▶︎ ]</h2>
+      <p align="center">
+        <iframe
+          width="560"
+          height="315"
+          src="https://youtube.com/embed/NGYp1zCBthk?si=7qMIpXUUOiEXiURC"
+          title="Day 01 Lecture - Internet & Networking"
+          frameborder="0"
+          allowfullscreen
+        ></iframe>
+      </p>
+      <hr />
+      <h2>Further reading & resources 🌍</h2>
+      <ul>
+        <li>
+          <a
+            href="https://winstonrw.medium.com/multi-page-html-sites-d45208c1c3ec"
+            >Medium - Multi Page Website</a
+          >
+        </li>
+        <li>
+          <a href="https://www.w3schools.com/tags/att_media.asp"
+            >W3schools - HTML media Attribute</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://www.netlify.com/blog/2016/09/29/a-step-by-step-guide-deploying-on-netlify/"
+            >Netlify - Deploy Your First Project
+          </a>
+        </li>
+      </ul>
+
+      <hr />
+
+      <!-- Footer Section -->
+
+      <p align="center"><a href="index.html">⬅ Back to Homepage</a></p>
+    </font>
+  </body>
+</html>

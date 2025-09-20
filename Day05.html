@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Day 05 - HTML Forms</title>
+  </head>
+  <body bgcolor="whitesmoke">
+    <!-- Header Section -->
+
+    <font face="Arial">
+      <h1 align="center">Day 05 - HTML Forms from Beginner to Advance</h1>
+      <p align="center">
+        "Why" of Forms: Understanding the fundamental purpose of forms from
+        first principles
+      </p>
+    </font>
+    <hr />
+
+    <!-- Main Section -->
+
+    <font face="trebuchet ms">
+      <h2>What is an HTML Form? 📋</h2>
+      <p>
+        An HTML form is used to collect user input. For example, login forms,
+        signup forms, search bars, and feedback forms. Forms are the backbone of
+        interactive websites.
+      </p>
+
+      <!-- form Tag -->
+      <h2>&lt;form&gt; Tag</h2>
+      <p>
+        The <code>&lt;form&gt;</code> tag defines a form in HTML. It acts like a
+        container for input elements.
+      </p>
+      <pre>
+&lt;form action="/submit" method="post"&gt;
+    <!-- form elements here -->
+&lt;/form&gt;
+    </pre>
+
+      <!-- input Tag -->
+      <h2>&lt;input&gt; Tag</h2>
+      <p>
+        The <code>&lt;input&gt;</code> tag is used to take input from the user.
+        It has many types like text, password, email, etc.
+      </p>
+      <pre>
+&lt;input type="text" placeholder="Enter your name"&gt;
+    </pre
+      >
+
+      <!-- label Tag -->
+      <h2>&lt;label&gt; Tag</h2>
+      <p>
+        The <code>&lt;label&gt;</code> tag is used to associate text with an
+        input field for better accessibility.
+      </p>
+      <pre>
+&lt;label for="username"&gt;Username:&lt;/label&gt;
+&lt;input type="text" id="username" name="username"&gt;
+    </pre
+      >
+
+      <!-- Form Structure -->
+      <h2>Detailed Explanation of Form Structure</h2>
+      <pre>
+&lt;form action="/submit" method="post"&gt;
+    &lt;label for="email"&gt;Email:&lt;/label&gt;
+    &lt;input type="email" id="email" name="email"&gt;
+    &lt;br&gt;&lt;br&gt;
+
+    &lt;label for="password"&gt;Password:&lt;/label&gt;
+    &lt;input type="password" id="password" name="password"&gt;
+    &lt;br&gt;&lt;br&gt;
+
+    &lt;button type="submit"&gt;Login&lt;/button&gt;
+&lt;/form&gt;
+    </pre
+      >
+
+      <!-- Name & Value -->
+      <h2>Name &amp; Value Attributes</h2>
+      <p>
+        <b>name:</b> Attribute specifies the key for the input field.<br />
+        <b>value:</b> Attribute specifies the default or selected value.
+      </p>
+
+      <!-- Radio Buttons -->
+      <h2>Radio Buttons ◉</h2>
+      <pre>
+&lt;form&gt;
+    &lt;input type="radio" id="male" name="gender" value="Male"&gt;
+    &lt;label for="male"&gt;Male&lt;/label&gt;
+
+    &lt;input type="radio" id="female" name="gender" value="Female"&gt;
+    &lt;label for="female"&gt;Female&lt;/label&gt;
+&lt;/form&gt;
+    </pre
+      >
+
+      <!-- Checkboxes -->
+      <h2>Checkboxes ✅</h2>
+      <pre>
+&lt;form&gt;
+    &lt;input type="checkbox" id="html" name="skill" value="HTML"&gt;
+    &lt;label for="html"&gt;HTML&lt;/label&gt;
+
+    &lt;input type="checkbox" id="css" name="skill" value="CSS"&gt;
+    &lt;label for="css"&gt;CSS&lt;/label&gt;
+&lt;/form&gt;
+    </pre
+      >
+
+      <!-- Placeholder -->
+      <h2>Placeholder Attribute</h2>
+      <p>
+        Placeholder is a hint shown inside the input field until the user types
+        something.
+      </p>
+      <pre>
+&lt;input type="text" placeholder="Enter your name"&gt;
+    </pre
+      >
+
+      <!-- Date, File, Email, Tel -->
+      <h2>Other Input Types</h2>
+      <pre>
+Date: &lt;input type="date"&gt; &lt;br&gt;&lt;br&gt;
+File Upload: &lt;input type="file"&gt; &lt;br&gt;&lt;br&gt;
+Email: &lt;input type="email" placeholder="example@mail.com"&gt; &lt;br&gt;&lt;br&gt;
+Phone: &lt;input type="tel" placeholder="123-456-7890"&gt;
+    </pre
+      >
+
+      <!-- Textarea -->
+      <h2>&lt;textarea&gt; Tag</h2>
+      <p>
+        The <code>&lt;textarea&gt;</code> tag is used for multi-line text input.
+      </p>
+      <pre>
+&lt;textarea rows="5" cols="40" placeholder="Write your message here..."&gt;&lt;/textarea&gt;
+    </pre
+      >
+
+      <!-- Select & Option -->
+      <h2>&lt;select&gt; and &lt;option&gt; Tag</h2>
+      <p>
+        Dropdown menus are created using the <code>&lt;select&gt;</code> tag.
+      </p>
+      <pre>
+&lt;select name="city"&gt;
+    &lt;option value="delhi"&gt;Delhi&lt;/option&gt;
+    &lt;option value="mumbai"&gt;Mumbai&lt;/option&gt;
+    &lt;option value="kolkata"&gt;Kolkata&lt;/option&gt;
+&lt;/select&gt;
+    </pre
+      >
+
+      <!-- Button -->
+      <h2>&lt;button&gt; Tag ▶️</h2>
+      <p>
+        The <code>&lt;button&gt;</code> tag is used to create clickable buttons.
+      </p>
+      <pre>
+&lt;button type="submit"&gt;Submit&lt;/button&gt;
+&lt;button type="reset"&gt;Reset&lt;/button&gt;
+    </pre
+      >
+
+      <hr />
+      <h2>Complete Example: Registration Form 🗐</h2>
+      <pre>
+&lt;form action="/submit" method="post"&gt;
+    &lt;label for="fullname"&gt;Full Name:&lt;/label&gt;
+    &lt;input type="text" id="fullname" name="fullname" placeholder="Enter your name"&gt;&lt;br&gt;&lt;br&gt;
+
+    &lt;label for="email"&gt;Email:&lt;/label&gt;
+    &lt;input type="email" id="email" name="email"&gt;&lt;br&gt;&lt;br&gt;
+
+    &lt;label&gt;Gender:&lt;/label&gt;
+    &lt;input type="radio" id="male" name="gender" value="Male"&gt;&lt;label for="male"&gt;Male&lt;/label&gt;
+    &lt;input type="radio" id="female" name="gender" value="Female"&gt;&lt;label for="female"&gt;Female&lt;/label&gt;&lt;br&gt;&lt;br&gt;
+
+    &lt;label&gt;Skills:&lt;/label&gt;
+    &lt;input type="checkbox" name="skill" value="HTML"&gt;HTML
+    &lt;input type="checkbox" name="skill" value="CSS"&gt;CSS
+    &lt;input type="checkbox" name="skill" value="JS"&gt;JavaScript&lt;br&gt;&lt;br&gt;
+
+    &lt;label for="dob"&gt;Date of Birth:&lt;/label&gt;
+    &lt;input type="date" id="dob" name="dob"&gt;&lt;br&gt;&lt;br&gt;
+
+    &lt;label for="resume"&gt;Upload Resume:&lt;/label&gt;
+    &lt;input type="file" id="resume" name="resume"&gt;&lt;br&gt;&lt;br&gt;
+
+    &lt;label for="message"&gt;Message:&lt;/label&gt;
+    &lt;textarea id="message" rows="4" cols="40"&gt;&lt;/textarea&gt;&lt;br&gt;&lt;br&gt;
+
+    &lt;label for="city"&gt;Select City:&lt;/label&gt;
+    &lt;select id="city" name="city"&gt;
+        &lt;option value="delhi"&gt;Delhi&lt;/option&gt;
+        &lt;option value="mumbai"&gt;Mumbai&lt;/option&gt;
+        &lt;option value="kolkata"&gt;Kolkata&lt;/option&gt;
+    &lt;/select&gt;&lt;br&gt;&lt;br&gt;
+
+    &lt;button type="submit"&gt;Submit&lt;/button&gt;
+&lt;/form&gt;
+    </pre
+      >
+
+      <p>
+        <img
+          src="https://qawithexperts.com/Images/Upload/23-09-2018/html-code-to-create-a-form-min.png"
+          alt="form img"
+        />
+      </p>
+      <!-- Lecture Video -->
+      <hr />
+      <h2>Lecture Video [ ▶︎ ]</h2>
+      <p align="center">
+        <iframe
+          width="560"
+          height="315"
+          src="https://youtube.com/embed/a4j9R_DvZ8M?si=MFfTxcQh46jJpg2k"
+          title="Day 01 Lecture - Internet & Networking"
+          frameborder="0"
+          allowfullscreen
+        ></iframe>
+      </p>
+      <hr />
+      <h2>Further reading & resources 🌍</h2>
+      <ul>
+        <li>
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/form"
+            >MDN - The Form element</a
+          >
+        </li>
+        <li>
+          <a href="https://www.w3schools.com/html/html_forms.asp"
+            >W3schools - HTML Forms</a
+          >
+        </li>
+      </ul>
+
+      <hr />
+
+      <!-- Footer Section -->
+
+      <p align="center"><a href="index.html">⬅ Back to Homepage</a></p>
+    </font>
+  </body>
+</html>

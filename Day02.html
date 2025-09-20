@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Day 02 - Introduction to HTML</title>
+  </head>
+  <body bgcolor="whitesmoke">
+    <!-- Header Section -->
+
+    <font face="Arial">
+      <h1 align="center">Day 02 — Introduction to HTML < / ></h1>
+      <p align="center">Understanding the foundation of every web page</p>
+    </font>
+    <hr />
+
+    <!--Main Section -->
+
+    <font face="trebuchet ms">
+      <h2>What is HTML?</h2>
+      <p>
+        HTML stands for <b>HyperText Markup Language</b>. It is the standard
+        language used to create and design webpages. HTML structures the content
+        of a website using elements like headings, paragraphs, images, and
+        links.
+      </p>
+      <img
+        src="https://www.w3.org/html/logo/downloads/HTML5_Logo_512.png"
+        width="200"
+        alt="HTML Logo"
+      />
+
+      <h2>World First Website 📄</h2>
+      <p>
+        The world's first website was created by <b>Tim Berners-Lee</b> in 1991.
+        It was hosted on a NeXT computer at CERN and explained the basics of the
+        World Wide Web.
+      </p>
+      <a href="http://info.cern.ch" target="_blank">Visit the First Website</a>
+
+      <!-- Hyperlinks -->
+      <h2>The Concept of Hyperlinks</h2>
+      <p>
+        Hyperlinks connect one page to another. They are created using the
+        <code>&lt;a&gt;</code> tag.
+      </p>
+      <p><b>Example:</b></p>
+      <pre>
+&lt;a href="https://www.example.com"&gt;Visit Example&lt;/a&gt;
+  </pre
+      >
+
+      <h2>What is a Markup Language?</h2>
+      <p>
+        A markup language uses tags to "mark up" text in a document. HTML is a
+        markup language, not a programming language.
+      </p>
+
+      <h2>Installing & Setting Up a Code Editor</h2>
+      <p>
+        Popular code editors for HTML include <b>Visual Studio Code</b>, Sublime
+        Text, and Notepad++.
+      </p>
+      <img
+        src="https://code.visualstudio.com/assets/images/code-stable.png"
+        width="250"
+        alt="VS Code"
+      />
+
+      <h2>Creating Your First Webpage 📝</h2>
+      <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;My First Webpage&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Hello World!&lt;/h1&gt;
+  &lt;p&gt;This is my first webpage.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+  </pre
+      >
+
+      <!-- Tags -->
+      <h2>Understanding Tags</h2>
+      <p>
+        HTML tags are keywords enclosed in <code>&lt;&gt;</code>. Example:
+        <code>&lt;p&gt;This is a paragraph&lt;/p&gt;</code>
+      </p>
+
+      <!-- Headings -->
+      <h2>What is Heading?</h2>
+      <p>
+        Headings are used to define titles or subtitles in a webpage. They range
+        from <code>&lt;h1&gt;</code> (largest) to
+        <code>&lt;h6&gt;</code> (smallest).
+      </p>
+      <pre>
+&lt;h1&gt;Main Heading&lt;/h1&gt;
+&lt;h2&gt;Sub Heading&lt;/h2&gt;
+&lt;h3&gt;Smaller Heading&lt;/h3&gt;
+  </pre
+      >
+
+      <!-- Paragraph -->
+      <h2>The Paragraph Tag</h2>
+      <p>The <code>&lt;p&gt;</code> tag defines a paragraph.</p>
+      <pre>
+&lt;p&gt;This is a paragraph example.&lt;/p&gt;
+  </pre
+      >
+
+      <!-- Elements -->
+      <h2>What is an Element?</h2>
+      <p>
+        An element consists of an opening tag, content, and a closing tag.
+        Example: <code>&lt;p&gt;This is content&lt;/p&gt;</code>
+      </p>
+
+      <!-- Horizontal Rule -->
+      <h2>Horizontal Rule (hr)</h2>
+      <p>The <code>&lt;hr&gt;</code> tag creates a horizontal line.</p>
+      <hr />
+
+      <!-- Line Break -->
+      <h2>Line Break (br)</h2>
+      <p>
+        The <code>&lt;br&gt;</code> tag is used to insert a single line break.
+      </p>
+
+      <!-- Lists -->
+      <h2>Introduction to HTML Lists</h2>
+      <p>Lists help organize information. HTML supports two main types:</p>
+
+      <h3>Ordered List (numbered)</h3>
+      <pre>
+&lt;ol&gt;
+  &lt;li&gt;Item 1&lt;/li&gt;
+  &lt;li&gt;Item 2&lt;/li&gt;
+&lt;/ol&gt;
+  </pre
+      >
+
+      <h3>Unordered List (bulleted)</h3>
+      <pre>
+&lt;ul&gt;
+  &lt;li&gt;Item A&lt;/li&gt;
+  &lt;li&gt;Item B&lt;/li&gt;
+&lt;/ul&gt;
+  </pre
+      >
+
+      <!-- Hyperlinks -->
+      <h2>Creating Hyperlinks</h2>
+      <pre>
+&lt;a href="https://google.com"&gt;Go to Google&lt;/a&gt;
+  </pre
+      >
+
+      <!-- Comments -->
+      <h2>Adding Comments in HTML</h2>
+      <p>Comments are notes for developers and are ignored by the browser.</p>
+      <pre>
+&lt;!-- This is a comment --&gt;
+  </pre
+      >
+
+      <!-- Anchor Tag -->
+      <h2>The Anchor Tag (a)</h2>
+      <p>
+        Used to create links. It supports attributes like <code>href</code>,
+        <code>target</code>.
+      </p>
+
+      <!-- Attributes -->
+      <h2>Attributes Explained</h2>
+      <p>
+        Attributes provide additional information about elements. Example:
+        <code>&lt;img src="image.jpg" alt="Description"&gt;</code>
+      </p>
+
+      <!-- Images -->
+      <h2>Adding Images (img)</h2>
+      <p>
+        The <code>&lt;img&gt;</code> tag is used to embed images in a webpage.
+      </p>
+      <pre>
+&lt;img src="photo.jpg" alt="My Photo" width="300"&gt;
+  </pre
+      >
+
+      <!-- Lecture Video Embed -->
+      <hr />
+      <h2>Lecture Video [ ▶︎ ]</h2>
+      <p align="center">
+        <iframe
+          width="560"
+          height="315"
+          src="https://youtube.com/embed/GkZN_-HMCJ8?si=9Z02__T7lF8gZ64V"
+          title="Day 01 Lecture - Internet & Networking"
+          frameborder="0"
+          allowfullscreen
+        ></iframe>
+      </p>
+
+      <hr />
+
+      <h2>Further reading & resources 🌍</h2>
+      <ul>
+        <li>
+          <a href="https://www.w3schools.com/html/">W3schools - HTML basics</a>
+        </li>
+        <li>
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes"
+            >MDN - HTML attribute reference</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://code.visualstudio.com/docs/getstarted/getting-started"
+            >Visual Studio - Installing & Setting Up a Code Editor</a
+          >
+        </li>
+      </ul>
+
+      <hr />
+      <!-- Footer Section -->
+
+      <p align="center"><a href="index.html">⬅ Back to Homepage</a></p>
+    </font>
+  </body>
+</html>

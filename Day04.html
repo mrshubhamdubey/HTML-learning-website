@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Day 04 - File Path, Boilerplate, DIV + Class + ID</title>
+</head>
+<body bgcolor="whitesmoke">
+
+<!-- Header Section -->
+
+<font face="Arial">
+  <h1 align="center">Day 04 - File Path in HTML | Boilerplate | DIV + Class + ID</h1>
+  <p align="center">Understanding of the File Path System & Targeting Your Elements with class and id</p>
+   </font>
+  <hr>
+
+    <!-- Main Section -->
+
+    <font face="trebuchet ms">
+    <h2>Introduction📂</h2>
+    <p>
+        Aaj hum seekhenge ki HTML me file paths kaise kaam karte hain, Boilerplate code ka importance kya hai,
+        aur <code>&lt;div&gt;</code>, <code>class</code>, <code>id</code> ke sath semantic tags (Header, Main, Footer) ka use.
+    </p>
+
+    <!-- File Paths -->
+    <h2>Understanding File Paths</h2>
+    <p>
+        File path ek address hota hai jo batata hai ki koi file (jaise image, video, ya HTML page) aapke project ke 
+        andar kahan rakhi gayi hai.
+    </p>
+
+    <h3>Types of File Paths</h3>
+    <ul>
+        <li><b>Relative Path:</b> File ka location current HTML file ke relation me dikhata hai.</li>
+        <li><b>Absolute Path:</b> File ka poora URL ya directory structure dikhata hai.</li>
+    </ul>
+
+    <h3>Relative Path Example</h3>
+    <p><img src="https://tjelvarolsson.com/images/linux_paths.png" alt="Relative path" width="300"> &nbsp;
+    <pre>
+&lt;img src="images/pic.jpg" alt="My Image"&gt;
+    </pre>
+
+    <h3>Absolute Path Example</h3>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVUFyTzHUMqR1rWpqJENAVgAdx2zrtPKdA2z_CQ_h5__EjSv9O0INr1s5yK8Z5T90ztlk&usqp=CAU" alt="Absolute path" width="300"></p>
+
+    <pre>
+&lt;img src="https://www.example.com/images/pic.jpg" alt="My Image"&gt;
+    </pre>
+
+    <p><b>Note:</b> Relative paths jyadatar projects me prefer kiye jaate hain kyunki yeh easy maintainable hote hain.</p>
+
+    <hr>
+
+    <!-- Boilerplate Code -->
+    <h2>Boilerplate Code < / > </h2>
+    <p>
+        Boilerplate code ek standard structure hai jo har HTML document ke start me likha jata hai.
+        Yeh browser ko batata hai ki file HTML hai aur kis encoding ka use karna hai.
+    </p>
+
+    <h3>HTML Boilerplate Example</h3>
+    <p><img src="https://preview.redd.it/boilerplate-code-stopped-showing-up-on-vs-code-with-the-v0-9ki09kv64cc91.png?width=640&crop=smart&auto=webp&s=4b572a09d0c118b23a8025557a9cee25fdc3b7f7" alt="boilor plate"></p>
+    
+    <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;My First Page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Hello World&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+    </pre>
+
+    <hr>
+
+    <h3>UTF-8 vs ASCII</h3>
+    <ul>
+        <li><b>ASCII:</b> Sirf English characters ko support karta hai (0–127 values).</li>
+        <li><b>UTF-8:</b> World ke lagbhag saare characters aur emojis ko support karta hai.</li>
+    </ul>
+    <p><b>Note:</b> Isiliye modern web pages UTF-8 encoding ka use karte hain.</p>
+
+    <hr>
+
+    <!-- div, class, id -->
+    <h2>DIV, Class & ID</h2>
+    <p>
+        <b>&lt;div&gt;</b> ek container tag hota hai jo content ko group karne ke liye use hota hai.
+        Isko <b>class</b> aur <b>id</b> ke sath aur powerful banaya jaata hai.
+    </p>
+
+    <h3>DIV Example</h3>
+    <pre>
+&lt;div&gt;
+    &lt;h2&gt;This is inside a div&lt;/h2&gt;
+    &lt;p&gt;A div groups content together.&lt;/p&gt;
+&lt;/div&gt;
+    </pre>
+
+    <h3>Class Example</h3>
+    <pre>
+&lt;div class="box"&gt;
+    &lt;p&gt;This div has a class name 'box'&lt;/p&gt;
+&lt;/div&gt;
+    </pre>
+
+    <h3>ID Example</h3>
+    <pre>
+&lt;div id="uniqueBox"&gt;
+    &lt;p&gt;This div has a unique ID 'uniqueBox'&lt;/p&gt;
+&lt;/div&gt;
+    </pre>
+
+    <p><b>Note:</b> Class ko multiple elements ke liye use karte hain, jabki ID ek element ke liye unique hota hai.</p>
+
+    <hr>
+
+    <!-- Semantic Tags -->
+    <h2>Semantic Tags: Header, Main & Footer</h2>
+    <p>
+        Semantic tags content ko meaning dete hain. Browser aur developer dono easily samajh jaate hain ki 
+        page kaunse section me kya role play kar raha hai.
+    </p>
+
+    <h3>Example</h3>
+    <pre>
+&lt;header&gt;
+    &lt;h1&gt;My Website Header&lt;/h1&gt;
+&lt;/header&gt;
+
+&lt;main&gt;
+    &lt;p&gt;This is the main content of the page.&lt;/p&gt;
+&lt;/main&gt;
+
+&lt;footer&gt;
+    &lt;p&gt;Copyright © 2025&lt;/p&gt;
+&lt;/footer&gt;
+    </pre>
+
+    <p><img src="https://cdn.educba.com/academy/wp-content/uploads/2019/12/HTML5-Semantic-Elements.jpg" alt="Semantic Tags:"></p>
+
+    <!-- Lecture Video -->
+   <hr>
+    <h2>Lecture Video [ ▶︎ ]</h2>
+  <p align="center">
+    <iframe width="560" height="315"
+      src="https://youtube.com/embed/k78lNSAB8VY?si=0zODauqliyZOJsA6"
+      title="Day 01 Lecture - Internet & Networking"
+      frameborder="0" allowfullscreen></iframe>
+  </p>
+
+<hr>
+  <h2>Further reading & resources 🌍</h2>
+  <ul>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/file">MDN - File Path in HTML</a></li>
+    <li><a href="https://www.freecodecamp.org/news/basic-html5-template-boilerplate-code-example/">freecodecamp - HTML 5 boilerplate</a></li>
+    <li><a href="https://www.w3schools.com/html/html5_semantic_elements.asp">W3schools - Semantic Tags</a></li>
+
+</ul>
+
+ <hr>
+    <!-- Footer section -->
+
+  <p align="center"><a href="index.html">⬅ Back to Homepage</a></p>
+</font>
+</body>
+</html>
